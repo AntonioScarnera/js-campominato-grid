@@ -57,6 +57,7 @@ button{
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .easy-width{
     width: 10%;

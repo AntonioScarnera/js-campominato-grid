@@ -5,28 +5,31 @@
 let selector = document.getElementById("difficulty");
 let btn = document.getElementById("btn");
 
-console.log(selector, btn);
 
 
-function stampareGriglia(numCol, nomeClasse){
+function stampareGriglia(numerocolonne, nomeClasse){
     let main = document.getElementById("app");
     main.innerHTML = '';
     let row = document.createElement("div");
     row.setAttribute("class", "row");
-    let cols = creaColonne(numCol, nomeClasse);
-    row.innerHTML = cols;
-    main.append(row);
-}
-function creaColonne(numerocolonne, classMod){
-    let cols = "";
-    for (let i = 1; i <= numerocolonne; i++){
-        cols +=`
-        <div class="mycol ${classMod}">${i}</div>
-        `;
+    for(let i = 1; i <= numerocolonne; i++){
+        let cols = creaColonne(nomeClasse);
+        cols.innerHTML = i;
+        row.append(cols);
+        main.append(row);
     }
-    return cols;
 }
+function creaColonne(classMod){
 
+   let cols = document.createElement("div");
+   cols.setAttribute("class", "mycol");
+   cols.classList.add(classMod);
+   cols.addEventListener('click', function(){
+    cols.style.backgroundColor = "#6495ed";
+   })
+   return cols;
+
+}
 
 
 btn.addEventListener('click', function(){
@@ -41,7 +44,8 @@ btn.addEventListener('click', function(){
         const easyclassMod = "easy-width";
         stampareGriglia(easycolNumber, easyclassMod);
         let easyCol = document.getElementsByClassName("mycol");
-        console.log(easyCol);
+        let test = easyCol;
+        console.log(test);
         break;
 
         case "hard":

@@ -42,11 +42,14 @@ btn.addEventListener('click', function(){
         console.log(easyCol);
         break;
 
-        case "hard": console.log(flag);
+        case "hard": stampareGriglia();
+        let hardCol = document.querySelectorAll(".mycol");
+        console.log(hardCol);
         break;
         
-        case "crazy": console.log(flag);
-        break;
+        case stampareGriglia();
+        let crazyCol = document.querySelectorAll(".mycol");
+        console.log(crazyCol);
 
     }
 

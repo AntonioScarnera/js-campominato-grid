@@ -11,7 +11,7 @@ function stampareGriglia(numerocolonne, nomeClasse){
     let main = document.getElementById("app");
     main.innerHTML = '';
     let row = document.createElement("div");
-    row.setAttribute("class", "row");
+    row.setAttribute("class", "row justify-content-center align-items-center align-content-center");
     for(let i = 1; i <= numerocolonne; i++){
         let cols = creaColonne(nomeClasse);
         cols.innerHTML = i;
@@ -46,25 +46,21 @@ btn.addEventListener('click', function(){
             const easycolNumber = 100;
             const easyclassMod = "easy-width";
             stampareGriglia(easycolNumber, easyclassMod);
-            let easyCol = document.getElementsByClassName("mycol");
-            let test = easyCol;
-            console.log(test);
+
         break;
 
         case "hard":
             const hardcolNumber = 81;
             const hardclassMod = "hard-width";
             stampareGriglia(hardcolNumber, hardclassMod);
-            let hardCol = document.getElementsByClassName("mycol");
-            console.log(hardCol);
+
         break;
         
         case "crazy":
             const crazycolNumber = 49;
             const crazyclassMod = "crazy-width";
             stampareGriglia(crazycolNumber, crazyclassMod);
-            let crazyCol = document.getElementsByClassName("mycol");
-            console.log(crazyCol);
+
         break;
 
     }

@@ -58,16 +58,18 @@ button{
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
+}
+.pointer{
     cursor: pointer;
 }
 .easy-width{
-    width: 10%;
+    width: calc(100% / 10);
 }
 .hard-width{
-    width: 11%;
+    width: calc(100% / 9);
 }
 .crazy-width{
-    width: 14%;
+    width: calc(100% / 7);
 }
 
 

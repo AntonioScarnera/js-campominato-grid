@@ -16,19 +16,22 @@ function stampareGriglia(numerocolonne, nomeClasse){
         let cols = creaColonne(nomeClasse);
         cols.innerHTML = i;
         row.append(cols);
-        main.append(row);
     }
+    main.append(row);
 }
 function creaColonne(classMod){
 
    let cols = document.createElement("div");
-   cols.setAttribute("class", "mycol");
+   cols.setAttribute("class", "mycol pointer");
    cols.classList.add(classMod);
-   cols.addEventListener('click', function(){
-    cols.style.backgroundColor = "#6495ed";
-   })
+   cols.addEventListener('click', coloraCella)
    return cols;
+}
 
+function coloraCella(){
+    this.style.backgroundColor = '#6495ed';
+    this.classList.remove("pointer");
+    this.removeEventListener('click', coloraCella)
 }
 
 
@@ -40,12 +43,12 @@ btn.addEventListener('click', function(){
     switch(flag){
 
         case "easy":
-        const easycolNumber = 100;
-        const easyclassMod = "easy-width";
-        stampareGriglia(easycolNumber, easyclassMod);
-        let easyCol = document.getElementsByClassName("mycol");
-        let test = easyCol;
-        console.log(test);
+            const easycolNumber = 100;
+            const easyclassMod = "easy-width";
+            stampareGriglia(easycolNumber, easyclassMod);
+            let easyCol = document.getElementsByClassName("mycol");
+            let test = easyCol;
+            console.log(test);
         break;
 
         case "hard":
@@ -54,7 +57,7 @@ btn.addEventListener('click', function(){
             stampareGriglia(hardcolNumber, hardclassMod);
             let hardCol = document.getElementsByClassName("mycol");
             console.log(hardCol);
-            break;
+        break;
         
         case "crazy":
             const crazycolNumber = 49;
@@ -62,7 +65,7 @@ btn.addEventListener('click', function(){
             stampareGriglia(crazycolNumber, crazyclassMod);
             let crazyCol = document.getElementsByClassName("mycol");
             console.log(crazyCol);
-            break;
+        break;
 
     }
 

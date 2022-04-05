@@ -83,6 +83,9 @@ main{
 #app h4{
     text-align: center;
 }
+main img{
+    width: 30px;
+}
 
 
 footer{

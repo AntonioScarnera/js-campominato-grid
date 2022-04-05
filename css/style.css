@@ -6,6 +6,7 @@
 
 body{
     height: 100vh;
+    min-height: 700px;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     min-width: 900px;
@@ -14,7 +15,7 @@ body{
 
 .nav-container{
     width: 80%;
-    height: 12vh;
+    height: 80px;
     margin: 0px auto;
     display: flex;
     justify-content: space-between;
@@ -79,7 +80,7 @@ button{
 
 
 footer{
-    height: 8vh;
+    height: 40px;
     display: flex;
     align-items: center;
 }
